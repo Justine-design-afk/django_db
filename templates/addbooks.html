@@ -1,4 +1,5 @@
 {%extends 'master.html'%}
+{% load django_bootstrap5 %}
 {%block title%}addbooks{%endblock%}
 
 
@@ -8,7 +9,7 @@
         <div class="col-sm-4">
             <form action="{% url 'addbooks' %}" method="post">
                 {%csrf_token%}
-                {{ form }}
+                {% bootstrap_form form %}
                 <button class="btn btn-success">save book</button>
             </form>
         </div>
