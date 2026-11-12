@@ -1,0 +1,18 @@
+{%extends 'master.html'%}
+{%block title%}addbooks{%endblock%}
+
+
+{%block content%}
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-sm-4">
+            <form action="{% url 'addbooks' %}" method="post">
+                {%csrf_token%}
+                {{ form }}
+                <button class="btn btn-success">save book</button>
+            </form>
+        </div>
+    </div>
+
+</div>
+{%endblock%}
