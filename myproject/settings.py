@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/6.1/ref/settings/
 
 from pathlib import Path
 
+from django.contrib import messages
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -129,3 +131,11 @@ MAILERS = {
 }
 
 APPEND_SLASH = False
+MESSAGE_TAGS = {
+    messages.error: 'danger',
+    messages.info: 'info',
+    messages.success: 'success',
+}
+
+MEDIA_URL='/media/'
+MEDIA_ROOT= BASE_DIR / 'media'

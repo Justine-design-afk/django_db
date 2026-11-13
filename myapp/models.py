@@ -12,6 +12,7 @@ class Book(models.Model):
     year = models.IntegerField()
     cost = models.DecimalField()
     isbn=models.CharField(unique=True, max_length=15,null=True)
+    cover = models.ImageField(upload_to='covers/', null=True)
     published = models.BooleanField()
     created_at = models.DateTimeField(auto_now_add=True)
     class Meta:
@@ -19,4 +20,5 @@ class Book(models.Model):
 
     # python manage.py makemigrations
     # python manage.py migrate
+
 

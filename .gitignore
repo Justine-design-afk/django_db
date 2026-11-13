@@ -1,0 +1,57 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Environment variables & local secrets
+.env
+.env.*
+!.env.example
+local_settings.py
+
+# Django databases & logs
+*.sqlite3
+*.db
+*.log
+celerybeat-schedule
+celerybeat.pid
+
+# Static & Media files (user uploads and collectstatic output)
+staticfiles/
+media/
+
+# Translations
+*.mo
+*.pot
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.pytest_cache/
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+*.egg
+
+# IDE & OS files
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+.media/
+

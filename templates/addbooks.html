@@ -7,13 +7,14 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-sm-4">
-            <form action="{% url 'addbooks' %}" method="post">
+            <form action="{% url 'addbooks' %}" method="post" enctype="multipart/form-data">
                 {%csrf_token%}
                 {% bootstrap_form form %}
-                <button class="btn btn-success">save book</button>
+                <button class="btn btn-success w-100">save book</button>
             </form>
         </div>
     </div>
 
 </div>
 {%endblock%}
+

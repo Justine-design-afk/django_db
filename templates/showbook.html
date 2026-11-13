@@ -6,7 +6,12 @@
 <div class="container">
     {%for book in books%}
     <h3>{{book.title}}</h3>
+    {% if book.cover%}
+    <img src="{{book.cover.url}}" alt="">
+    {%endif%}
     <p>{{book.isbn}}</p>
+    <a href="{% url 'delete_books' book.id %}" class="btn btn-success">Delete</a>
+     <a href="{% url 'edit_books' book.id %}" class="btn btn-success">edit</a>
     {%endfor%}
 
 </div>
