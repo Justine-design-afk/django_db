@@ -335,7 +335,7 @@
           <description value="" />
           <database-type value="SQLITE" />
           <config-type value="BASIC" />
-          <database-version value="9999.0" />
+          <database-version value="3.53" />
           <driver-source value="BUNDLED" />
           <driver-library value="" />
           <driver value="" />

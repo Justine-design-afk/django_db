@@ -16,7 +16,7 @@ Including another URLconf
 """
 from django.conf.urls.static import static
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 
 from myapp import views
 from myproject import settings
@@ -27,6 +27,10 @@ urlpatterns = [
     path('addbooks', views.addbooks, name='addbooks'),
     path('delete_books/<int:id>', views.delete_books, name='delete_books'),
     path('edit_books/<int:id>', views.edit_books, name='edit_books'),
+    path('accounts/login',views.login, name='signin'),
+    path('accounts/signup',views.signup, name='signup'),
+    path('accounts/logout',views.signout, name='signout'),
+    path('accounts/',include('django.contrib.auth.urls')),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
